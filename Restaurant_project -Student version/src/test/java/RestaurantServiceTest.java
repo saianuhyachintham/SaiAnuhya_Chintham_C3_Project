@@ -75,4 +75,11 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void after_adding_items_to_the_order_should_display_total_value(){
+        double orderValue=0;
+        List<String> itemsToOrder=null;
+        orderValue=diaplayOrderValue(itemsToOrder);
+    }
 }
