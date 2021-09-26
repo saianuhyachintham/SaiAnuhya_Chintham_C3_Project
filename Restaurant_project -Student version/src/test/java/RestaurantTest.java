@@ -4,7 +4,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.lang.reflect.Array;
 import java.time.LocalTime;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -79,8 +81,11 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
     public void after_adding_items_to_the_order_should_display_total_value(){
-        double orderValue=0;
-        List<String> itemsToOrder=null;
-        orderValue=diaplayOrderValue(itemsToOrder);
+        restaurant.addToMenu("Sweet corn soup",119);
+        restaurant.addToMenu("Vegetable lasagne", 269);
+        List<String> itemsToOrder= Arrays.asList("Sweet corn soup","Vegetable lasagne");
+        double orderValue=restaurant.displayOrderValue(itemsToOrder);
+        assertEquals(388.0,orderValue);
+
     }
 }

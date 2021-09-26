@@ -73,6 +73,15 @@ public class Restaurant {
         return name;
     }
 
+    public double displayOrderValue(List<String> itemsToOrder){
+    double orderValue=0.0;
+    for(String itemName:itemsToOrder){
+        orderValue=orderValue+findItemByName(itemName).getPrice();
+    }
+    return orderValue;
+
+    }
+
 
 
 
