@@ -19,8 +19,9 @@ public class Restaurant {
     }
 
     public boolean isRestaurantOpen() {
-        //return true;
-        //DELETE ABOVE STATEMENT AND WRITE CODE HERE
+
+        //If the current time is equal to or after opening time and
+        //current time equal to before closing time is the criteria
         boolean status;
         if(((getCurrentTime().isAfter(openingTime))||(getCurrentTime().equals(openingTime)))&&((getCurrentTime().isBefore(closingTime))||(getCurrentTime().equals(closingTime)))){
             status=true;
@@ -36,7 +37,6 @@ public class Restaurant {
 
     public List<Item> getMenu() {
         return menu;
-        //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
     }
 
     private Item findItemByName(String itemName){

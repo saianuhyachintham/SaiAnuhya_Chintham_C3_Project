@@ -14,13 +14,8 @@ public class RestaurantService {
                     found=true;
                     return restaurantToBeSearched;
                 }
-
-
                 if(found==false) throw new restaurantNotFoundException(restaurantName);
-
         return null;
-
-
     }
 
 
