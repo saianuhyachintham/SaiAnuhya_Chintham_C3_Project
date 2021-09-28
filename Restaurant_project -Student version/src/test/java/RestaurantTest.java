@@ -30,7 +30,7 @@ class RestaurantTest {
         //WRITE UNIT TEST CASE HERE
 
         Restaurant spyrestaurant=Mockito.spy(restaurant);
-        LocalTime timeToSearch=LocalTime.parse("13:10:00");
+        LocalTime timeToSearch=LocalTime.parse("12:30:00");
         Mockito.when(spyrestaurant.getCurrentTime()).thenReturn(timeToSearch);
 
         assertTrue(spyrestaurant.isRestaurantOpen());

@@ -22,7 +22,7 @@ public class Restaurant {
         //return true;
         //DELETE ABOVE STATEMENT AND WRITE CODE HERE
         boolean status;
-        if((getCurrentTime().isAfter(openingTime))&&(getCurrentTime().isBefore(closingTime))){
+        if(((getCurrentTime().isAfter(openingTime))||(getCurrentTime().equals(openingTime)))&&((getCurrentTime().isBefore(closingTime))||(getCurrentTime().equals(closingTime)))){
             status=true;
         }
         else{
